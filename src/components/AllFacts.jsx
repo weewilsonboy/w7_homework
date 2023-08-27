@@ -1,14 +1,11 @@
 import SingleFact from "./SingleFact"
-
 const AllFacts = ({facts})=>{
-    console.log(facts)
+
+    const arrayOfFacts = facts.map((fact)=><SingleFact fact={fact}/>)
+    console.log(arrayOfFacts)
     return(<>
 
-    <SingleFact fact={facts[0]}/>
-    <SingleFact fact={facts[1]}/>
-    <SingleFact fact={facts[2]}/>
-    <SingleFact fact={facts[3]}/>
-    <SingleFact fact={facts[4]}/>
+    {arrayOfFacts}
     </>
         
     )

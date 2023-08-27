@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import SingleFact from './components/SingleFact'
 import AllFacts from './components/AllFacts'
+import Header from './components/Header'
 
 function App() {
   const [catFacts, setCatFacts] = useState([])
@@ -20,6 +21,7 @@ function App() {
   // <SingleFact fact={catFacts.data[0]}/>
   return (
     <>
+    <Header setCatFacts={setCatFacts} catFacts={catFacts}/>
       {catFacts.length ? <AllFacts facts={catFacts}/>:"test"}
     </>
   )
